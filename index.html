@@ -308,18 +308,14 @@
 
 </body>
 </html>
-<audio id="bg-music" autoplay loop>
+<audio id="bg-music" loop>
   <source src="CHROMAKOPIA.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-  const music = document.getElementById('bg-music');
+  const music = document.getElementById("bg-music");
 
-  window.addEventListener('click', async () => {
-    try {
-      await music.play();
-    } catch (err) {
-      console.log("Autoplay bloqueado");
-    }
+  document.addEventListener("click", () => {
+    music.play();
   }, { once: true });
 </script>
